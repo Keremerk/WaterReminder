@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bellOnboardingFragment">
+
+    <fragment
+        android:id="@+id/bellOnboardingFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.BellOnboardingFragment"
+        android:label="fragment_bell_onboarding"
+        tools:layout="@layout/fragment_bell_onboarding" >
+        <action
+            android:id="@+id/action_bellOnboardingFragment_to_drinkOnboardingFragment"
+            app:destination="@id/drinkOnboardingFragment" />
+        <action
+            android:id="@+id/action_bellOnboardingFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_bellOnboardingFragment_to_inAppFragment"
+            app:destination="@id/inAppFragment" />
+        <action
+            android:id="@+id/action_bellOnboardingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkOnboardingFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.DrinkOnboardingFragment"
+        android:label="fragment_drink_onboarding"
+        tools:layout="@layout/fragment_drink_onboarding" >
+        <action
+            android:id="@+id/action_drinkOnboardingFragment_to_rocketOnboardingFragment"
+            app:destination="@id/rocketOnboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketOnboardingFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.RocketOnboardingFragment"
+        android:label="fragment_rocket_onboarding"
+        tools:layout="@layout/fragment_rocket_onboarding" >
+        <action
+            android:id="@+id/action_rocketOnboardingFragment_to_genderFragment"
+            app:destination="@id/genderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.GenderFragment"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" >
+        <action
+            android:id="@+id/action_genderFragment_to_weightFragment"
+            app:destination="@id/weightFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weightFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.WeightFragment"
+        android:label="fragment_weight"
+        tools:layout="@layout/fragment_weight" >
+        <action
+            android:id="@+id/action_weightFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment" />
+        <argument
+            android:name="arg_gender"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.ExerciseFragment"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise" >
+        <argument
+            android:name="ARG_WEIGHT"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_exerciseFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <argument
+            android:name="ARG_GENDER2"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.waterreminder.fragments.onboarding.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_inAppFragment"
+            app:destination="@id/inAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inAppFragment"
+        android:name="com.example.waterreminder.fragments.InAppFragment"
+        android:label="fragment_in_app"
+        tools:layout="@layout/fragment_in_app" >
+        <action
+            android:id="@+id/action_inAppFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.waterreminder.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.waterreminder.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.waterreminder.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_inAppFragment"
+            app:destination="@id/inAppFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_reminderFragment"
+            app:destination="@id/reminderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="com.example.waterreminder.fragments.ReminderFragment"
+        android:label="fragment_reminder"
+        tools:layout="@layout/fragment_reminder" />
+</navigation>
