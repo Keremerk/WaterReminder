@@ -15,7 +15,7 @@ Water Reminder is an Android app that reminds users to drink water throughout th
 <br>
 
 # Features
-Calculates daily water intake based on users gender,weight and exercise type.
+This app calculates daily water intake based on users gender,weight and exercise type.
 Provides reminders throughout the day to drink water based on the users reminders.
 Tracks water intake and displays progress over time
 Offers premium options for access to a wider variety of drinks
